@@ -10,6 +10,7 @@ public class cameraMovement : MonoBehaviour
     void Start()
     {
         offset = transform.position - player.transform.position;
+        offset.y = 2;
     }
 
     // Update is called once per frame
