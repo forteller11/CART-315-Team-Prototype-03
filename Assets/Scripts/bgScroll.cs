@@ -69,9 +69,6 @@ public class bgScroll : MonoBehaviour
                 {
                     if (firstChild.transform.position.x < Camera.main.transform.position.x)
                     {
-                        
-
-                            //Debug.Log("I am responding leftward");
                             
                             Vector3 lastPosition = lastChild.transform.position;
                             Vector3 lastSize = (lastChild.bounds.max - lastChild.bounds.min);
@@ -85,8 +82,6 @@ public class bgScroll : MonoBehaviour
 
                     if (lastChild.transform.position.x > Camera.main.transform.position.x)
                     {
-
-                            Debug.Log("I am responding rightward");
 
                             Vector3 lastPosition = lastChild.transform.position;
                             Vector3 lastSize = (lastChild.bounds.max - lastChild.bounds.min);
