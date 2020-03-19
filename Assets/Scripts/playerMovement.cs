@@ -9,8 +9,9 @@ public class playerMovement : MonoBehaviour
     public float max_speed;
     public float x_movement;
 
+    public int abilityIndex;
+
     public bool playerIsMoving;
-    public bool playerIsOnGround;
 
     public Rigidbody2D rb;
 
@@ -19,7 +20,7 @@ public class playerMovement : MonoBehaviour
     {
         rb = this.gameObject.GetComponent<Rigidbody2D>();
         playerIsMoving = false;
-        playerIsOnGround = true;
+        abilityIndex = 0;
     }
 
     // Update is called once per frame
@@ -32,11 +33,20 @@ public class playerMovement : MonoBehaviour
         {
             playerIsMoving = false;
         }
-        if (Input.GetButtonDown("Jump") && playerIsOnGround)
+        if (Input.GetButtonDown("Action"))
         {
-            //Debug.Log("I am responding");
-            Vector2 jump_force = new Vector2(0, jump_scaler);
-            rb.AddForce(jump_force);
+            switch (abilityIndex)
+            {
+                case 0:
+                    useAbility1();
+                    break;
+                case 1:
+                    useAbility2();
+                    break;
+                case 2:
+                    useAbility3();
+                    break;
+            }
         } 
     }
     void FixedUpdate()
@@ -51,15 +61,38 @@ public class playerMovement : MonoBehaviour
                 rb.AddForce(movement_scaler * movement);
             }
         }
+        Debug.Log(abilityIndex);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("working");
+        abilityIndex++;
+        abilityIndex = abilityIndex % 3;
+        Debug.Log(abilityIndex);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         Debug.Log("also working");
+    }
+
+    void useAbility1()
+    {
+        // This allows jumping/levitating
+        Debug.Log("you used 1");
+        Vector2 jump_force = new Vector2(0, jump_scaler);
+        rb.AddForce(jump_force);
+    }
+
+    void useAbility2()
+    {
+        // This would allow combining? if an item thowing mechanic or something similar is added
+        Debug.Log("you used 2");
+    }
+
+    void useAbility3()
+    {
+        // This allows ???
+        Debug.Log("you used 3");
     }
 }
