@@ -14,11 +14,13 @@ public class playerMovement : MonoBehaviour
     public bool playerIsMoving;
 
     public Rigidbody2D rb;
+    Animator playerAnim;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = this.gameObject.GetComponent<Rigidbody2D>();
+        playerAnim = GetComponent<Animator>();
         playerIsMoving = false;
         abilityIndex = 0;
     }
@@ -60,8 +62,22 @@ public class playerMovement : MonoBehaviour
                 Vector2 movement = new Vector2(x_movement, 0);
                 rb.AddForce(movement_scaler * movement);
             }
+
+            if (x_movement < 0)
+            {
+                playerAnim.SetBool("isWalkingAhead", false);
+                playerAnim.SetBool("isWalkingBack", true);
+            }
+            else
+            {
+                playerAnim.SetBool("isWalkingAhead", true);
+                playerAnim.SetBool("isWalkingBack", false);
+            }
+        } else
+        {
+            playerAnim.SetBool("isWalkingAhead", false);
+            playerAnim.SetBool("isWalkingBack", false);
         }
-        Debug.Log(abilityIndex);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
