@@ -1,88 +1,70 @@
 fileFormatVersion: 2
-guid: 1e26e66789ba3f549a84ebb14941d1c2
+guid: 1f1d183c376733a4393655dd61754888
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4197160807500232772
-    second: tilesets_0
+      213: -7568623786034355670
+    second: Witchcraft_spr_4_edit_0
   - first:
-      213: -8011120685823765945
-    second: tilesets_1
+      213: 8331669877352309404
+    second: Witchcraft_spr_4_edit_1
   - first:
-      213: 511751557231380415
-    second: tilesets_2
+      213: 1740012931309265364
+    second: Witchcraft_spr_4_edit_2
   - first:
-      213: -7563295339155453782
-    second: tilesets_3
+      213: -7530714644322125681
+    second: Witchcraft_spr_4_edit_3
   - first:
-      213: 8381771087374729117
-    second: tilesets_4
+      213: 3420517988917240675
+    second: Witchcraft_spr_4_edit_4
   - first:
-      213: -6893606465111947806
-    second: tilesets_5
+      213: -2051373335718733826
+    second: Witchcraft_spr_4_edit_5
   - first:
-      213: 6105470799778628883
-    second: tilesets_6
+      213: -9079818112815814811
+    second: Witchcraft_spr_4_edit_6
   - first:
-      213: 2868832590482414604
-    second: tilesets_7
+      213: 5685343461910959103
+    second: Witchcraft_spr_4_edit_7
   - first:
-      213: -5298902885565915283
-    second: tilesets_8
+      213: 1402071318656914658
+    second: Witchcraft_spr_4_edit_8
   - first:
-      213: -4887214739148215214
-    second: tilesets_9
+      213: -2409429480962181173
+    second: Witchcraft_spr_4_edit_9
   - first:
-      213: 8097598426421854717
-    second: tilesets_10
+      213: -3274670041365334909
+    second: Witchcraft_spr_4_edit_10
   - first:
-      213: 6876506498966806167
-    second: tilesets_11
+      213: 6128401588724749975
+    second: Witchcraft_spr_4_edit_11
   - first:
-      213: -7341284093400871141
-    second: tilesets_12
+      213: 3449470880037005879
+    second: Witchcraft_spr_4_edit_12
   - first:
-      213: 6918151020637308241
-    second: tilesets_13
+      213: -1430465202416953743
+    second: Witchcraft_spr_4_edit_13
   - first:
-      213: 207799629167017651
-    second: tilesets_14
+      213: 7204242331545047674
+    second: Witchcraft_spr_4_edit_14
   - first:
-      213: -2431579375990507555
-    second: tilesets_15
+      213: -8364939803223924363
+    second: Witchcraft_spr_4_edit_15
   - first:
-      213: 5254754937103403027
-    second: tilesets_16
+      213: -2949991498661485372
+    second: Witchcraft_spr_4_edit_16
   - first:
-      213: 3497845450899428337
-    second: tilesets_17
+      213: 1990886857207303604
+    second: Witchcraft_spr_4_edit_17
   - first:
-      213: 9076965357952605414
-    second: tilesets_18
+      213: 730851637163256879
+    second: Witchcraft_spr_4_edit_18
   - first:
-      213: -2050807692096608109
-    second: tilesets_19
+      213: 4218141478862647642
+    second: Witchcraft_spr_4_edit_19
   - first:
-      213: 728183614515874009
-    second: tilesets_20
-  - first:
-      213: 4495271312120870595
-    second: tilesets_21
-  - first:
-      213: -6882906184223074432
-    second: tilesets_22
-  - first:
-      213: -1681007539122341125
-    second: tilesets_23
-  - first:
-      213: 7644242042049524199
-    second: tilesets_24
-  - first:
-      213: 8798183971590883769
-    second: tilesets_25
-  - first:
-      213: -8116227782747372081
-    second: tilesets_26
+      213: 7688389667752168245
+    second: Witchcraft_spr_4_edit_20
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -126,7 +108,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -167,369 +149,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tilesets_0
+      name: Witchcraft_spr_4_edit_0
       rect:
         serializedVersion: 2
-        x: 32
-        y: 160
-        width: 80
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 823a0330573e0f14aaedebe39d8c10cf
-      internalID: -4197160807500232772
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesets_1
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 160
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 47ca8b60be7dbe84fb32a3cf26a43262
-      internalID: -8011120685823765945
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesets_2
-      rect:
-        serializedVersion: 2
-        x: 176
-        y: 160
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 094124605239c01408cbf8e7d9cae54b
-      internalID: 511751557231380415
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesets_3
-      rect:
-        serializedVersion: 2
-        x: 202
-        y: 160
-        width: 38
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c24722f4c8d06a743bd438d3aeea0dfb
-      internalID: -7563295339155453782
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesets_4
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 160
-        width: 38
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fe4acc987465665409e5f1326d296e4b
-      internalID: 8381771087374729117
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesets_5
-      rect:
-        serializedVersion: 2
-        x: 37
-        y: 112
-        width: 27
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c6caf7043a1617e47a84edeb8520e003
-      internalID: -6893606465111947806
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesets_6
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 112
-        width: 27
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3eb93b2db5a6f40418e55ecaa1ffa842
-      internalID: 6105470799778628883
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesets_7
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 117
-        width: 16
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 80917f7d2cb218448841b1b4c7b7a0c4
-      internalID: 2868832590482414604
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesets_8
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 121
-        width: 16
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3be22e5f586f3cc4d8654ec409b2ff90
-      internalID: -5298902885565915283
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesets_9
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 128
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b91f1ef7768c4924cb6303a068b4f3fd
-      internalID: -4887214739148215214
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesets_10
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 128
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: da0f081380bcf4648b69a8795059c0ab
-      internalID: 8097598426421854717
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesets_11
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 115
-        width: 32
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b47bd95136131e543b81f65bc0a25d49
-      internalID: 6876506498966806167
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesets_12
-      rect:
-        serializedVersion: 2
-        x: 304
-        y: 115
-        width: 32
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4d2ced7f05428f347a252e1fb9643a18
-      internalID: -7341284093400871141
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesets_13
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 112
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 65faebf2b95ae3c45afe67d859f223ad
-      internalID: 6918151020637308241
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesets_14
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 48
-        width: 16
-        height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bae02644d10d70847bffbd97d807fb25
-      internalID: 207799629167017651
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesets_15
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 64
-        width: 32
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a840fa98d70360745b68714b46e54f1a
-      internalID: -2431579375990507555
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesets_16
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 64
-        width: 16
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 97bbfe4f546ad4249a1d2c5ef907737f
-      internalID: 5254754937103403027
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesets_17
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 64
-        width: 16
+        x: 0
+        y: 0
+        width: 24
         height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -538,20 +163,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a73f835343d63a44a2558b368c3df20
-      internalID: 3497845450899428337
+      spriteID: bf3c0c7d0357bf7419d901e50117c6aa
+      internalID: -7568623786034355670
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilesets_18
+      name: Witchcraft_spr_4_edit_1
       rect:
         serializedVersion: 2
-        x: 160
-        y: 64
-        width: 32
-        height: 21
+        x: 24
+        y: 0
+        width: 24
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -559,62 +184,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18874fcd05190b546a5025a4b6db091c
-      internalID: 9076965357952605414
+      spriteID: 1b72e2b609c90f64599932d58b746560
+      internalID: 8331669877352309404
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilesets_19
-      rect:
-        serializedVersion: 2
-        x: 204
-        y: 8
-        width: 72
-        height: 77
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3fc109209fd39c845829cebd63ba50cf
-      internalID: -2050807692096608109
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesets_20
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 27246a0e970a7a8478925ea4ba11626d
-      internalID: 728183614515874009
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilesets_21
+      name: Witchcraft_spr_4_edit_2
       rect:
         serializedVersion: 2
         x: 48
-        y: 16
-        width: 16
-        height: 32
+        y: 0
+        width: 24
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -622,20 +205,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34125e0b19cdee54ab05ce39ddb0fcc1
-      internalID: 4495271312120870595
+      spriteID: 0c699bc82e6be1547ad0b977e986c17a
+      internalID: 1740012931309265364
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilesets_22
+      name: Witchcraft_spr_4_edit_3
       rect:
         serializedVersion: 2
-        x: 80
-        y: 16
-        width: 16
-        height: 32
+        x: 72
+        y: 0
+        width: 24
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -643,20 +226,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4399ad4efcc666241b9489ce70c46811
-      internalID: -6882906184223074432
+      spriteID: 4831ecafc48fc7e4c9ba76cc5108f3cc
+      internalID: -7530714644322125681
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilesets_23
+      name: Witchcraft_spr_4_edit_4
       rect:
         serializedVersion: 2
-        x: 112
-        y: 16
-        width: 32
-        height: 32
+        x: 96
+        y: 0
+        width: 24
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -664,20 +247,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ee59aaf6a5008c449830b2c37fe70b0
-      internalID: -1681007539122341125
+      spriteID: a11795fe0b891c840a6598015419b69f
+      internalID: 3420517988917240675
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilesets_24
+      name: Witchcraft_spr_4_edit_5
       rect:
         serializedVersion: 2
-        x: 160
-        y: 16
-        width: 32
-        height: 32
+        x: 120
+        y: 0
+        width: 24
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -685,20 +268,146 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9567864bf77f12b4f8ebb7e02052e463
-      internalID: 7644242042049524199
+      spriteID: 59d6cbae232fa0948942161d409d8e3b
+      internalID: -2051373335718733826
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilesets_25
+      name: Witchcraft_spr_4_edit_6
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38ccb3e89881a2d48b539443362a0af2
+      internalID: -9079818112815814811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Witchcraft_spr_4_edit_7
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f1b4856f20926547bc3a2744866b928
+      internalID: 5685343461910959103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Witchcraft_spr_4_edit_8
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30510374dc94bb946ae946d3783fc8a3
+      internalID: 1402071318656914658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Witchcraft_spr_4_edit_9
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c459ce54f59b6e742b9d45b320b13fd2
+      internalID: -2409429480962181173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Witchcraft_spr_4_edit_10
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b112e03d2b00e914489a569529753f6a
+      internalID: -3274670041365334909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Witchcraft_spr_4_edit_11
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca73827fbc42bf44e90a3c84f0163ffc
+      internalID: 6128401588724749975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Witchcraft_spr_4_edit_12
       rect:
         serializedVersion: 2
         x: 288
-        y: 16
-        width: 32
-        height: 64
+        y: 0
+        width: 24
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -706,20 +415,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9b1a7269a3465f47b09ec3f75ceb804
-      internalID: 8798183971590883769
+      spriteID: 5b7fa3c6e0c1bda42912f1ff5854ce01
+      internalID: 3449470880037005879
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilesets_26
+      name: Witchcraft_spr_4_edit_13
       rect:
         serializedVersion: 2
-        x: 336
-        y: 32
-        width: 32
-        height: 32
+        x: 312
+        y: 0
+        width: 24
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -727,8 +436,155 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68d3a3bc0f39bb64482accec789dc77e
-      internalID: -8116227782747372081
+      spriteID: cb1da40c47bcfdd4e8da5ea49fafe37d
+      internalID: -1430465202416953743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Witchcraft_spr_4_edit_14
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8215b1366925dd4b90f1a7c853542b0
+      internalID: 7204242331545047674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Witchcraft_spr_4_edit_15
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4ccfef2d021c5343a7a394784033c0b
+      internalID: -8364939803223924363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Witchcraft_spr_4_edit_16
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b63c50139913274dbe609e2579249f6
+      internalID: -2949991498661485372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Witchcraft_spr_4_edit_17
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f653ac9b0f93e14991eaa60c8621ea2
+      internalID: 1990886857207303604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Witchcraft_spr_4_edit_18
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25a65f2bae9f00647b0edc1a357c735a
+      internalID: 730851637163256879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Witchcraft_spr_4_edit_19
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a20c89aa7fba76b4ead240ce704fdaf0
+      internalID: 4218141478862647642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Witchcraft_spr_4_edit_20
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5320840f4d7c6fc4d8be0d68b681666a
+      internalID: 7688389667752168245
       vertices: []
       indices: 
       edges: []
