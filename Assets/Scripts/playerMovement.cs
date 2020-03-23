@@ -16,6 +16,8 @@ public class playerMovement : MonoBehaviour
     public Rigidbody2D rb;
     Animator playerAnim;
 
+    Animator modeAlertAnim;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,8 @@ public class playerMovement : MonoBehaviour
         playerAnim = GetComponent<Animator>();
         playerIsMoving = false;
         abilityIndex = 0;
+
+        modeAlertAnim = GameObject.Find("Mode Alert").GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -85,6 +89,7 @@ public class playerMovement : MonoBehaviour
         abilityIndex++;
         abilityIndex = abilityIndex % 3;
         Debug.Log(abilityIndex);
+        modeAlertAnim.SetTrigger("modeSwapped");
     }
 
     private void OnTriggerExit2D(Collider2D collision)
