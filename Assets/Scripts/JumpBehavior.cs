@@ -6,11 +6,13 @@ namespace Behaviors
 {
     public class JumpBehavior : MonoBehaviour, IBehavior
     {
+
         public BehaviorManager BehaviorManager { get; set; }
         public MonoBehaviour Script { get; set; }
         public bool Activated { get; set; }
+        private bool _grounded;
 
-        public float JumpForce = 200f;
+        public float JumpForce = 1400f;
 
 //        public BoxCollider2D _groundCollider2D;
 //        public Vector2 
@@ -26,22 +28,18 @@ namespace Behaviors
             List<Collider2D> overlappingColliders = new List<Collider2D>();
             if (Physics2D.GetContacts(BehaviorManager.Rb, overlappingColliders) > 0)
             {
-                Debug.Log("overlapped");
                 for (int i = 0; i < overlappingColliders.Count; i++)
                 {
                     if (overlappingColliders[i].gameObject.tag == "Ground")
                     {
-                        Debug.Log("grounded");
-                        Activated = true;
+                        _grounded = true;
                     }
                 }
-                Activated = true;
-                
+
             }
             else
             {
-                Debug.Log("exit grounded");
-                Activated = false;
+                _grounded = false;
             }
         }
 
@@ -51,10 +49,20 @@ namespace Behaviors
         }
         
         
-        public void PerformAction()
+        public void OnActionPress()
         {
+            if (_grounded == false)
+                return;
+            
             BehaviorManager.Rb.AddForce(new Vector2(0, JumpForce));
-            Debug.Log("Jump");
+        }
+        
+        public void OnActionRelease()
+        {
+            if (_grounded == true)
+                return;
+            if (BehaviorManager.Rb.velocity.y > 0)
+                BehaviorManager.Rb.velocity *= new Vector2(1, .6f);
         }
 
         

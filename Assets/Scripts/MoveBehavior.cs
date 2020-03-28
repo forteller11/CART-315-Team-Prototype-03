@@ -6,26 +6,27 @@ namespace Behaviors
 {
     public class MoveBehavior: MonoBehaviour, IBehavior
     {
+
         public BehaviorManager BehaviorManager { get; set; }
         public MonoBehaviour Script { get; set; }
         public bool Activated { get; set; }
 
-        public float MovementMultiplier = 10f;
-        public float MaxHorizontalVelocity = 4f;
+        public float MovementMultiplier = 60f;
+        public float MaxHorizontalVelocity = 3f;
         
-        public void PerformAction()
-        {
-            throw new System.NotImplementedException();
-        }
+        public void OnActionPress() { }
+        public void OnActionRelease() { }
+        
 
         public void FixedUpdate()
         {
             float horizontalInput = Input.GetAxis("Horizontal");
             Vector2 horizontalForce = new Vector2(horizontalInput * MovementMultiplier, 0f);
             
-            if (Mathf.Abs(BehaviorManager.Rb.velocity.x) < MaxHorizontalVelocity)
-                BehaviorManager.Rb.AddForce(horizontalForce);
+            BehaviorManager.Rb.AddForce(horizontalForce);
             
+            float clampedHorzVel = Mathf.Clamp(BehaviorManager.Rb.velocity.x, -MaxHorizontalVelocity, MaxHorizontalVelocity);
+            BehaviorManager.Rb.velocity = new Vector2(clampedHorzVel, BehaviorManager.Rb.velocity.y);
 
             if (Math.Abs(horizontalInput) > 0.01f)
             {

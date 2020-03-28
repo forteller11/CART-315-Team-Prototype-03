@@ -5,6 +5,11 @@ using UnityEngine;
 
 public class FireBehavior : MonoBehaviour, IBehavior
 {
+    public void OnActionRelease()
+    {
+        throw new System.NotImplementedException();
+    }
+
     public BehaviorManager BehaviorManager { get; set; }
     public MonoBehaviour Script { get; set; }
     public bool Activated { get; set; }
@@ -39,7 +44,7 @@ public class FireBehavior : MonoBehaviour, IBehavior
         }
     }
 
-    public void PerformAction()
+    public void OnActionPress()
     {
         throw new System.NotImplementedException();
     }

@@ -66,7 +66,9 @@ public class BehaviorManager : MonoBehaviour
             behavior.BehaviorManager = this;
         }
         
-        MoveBehavior.Activated = true; //set all behaviors false but movement
+        MoveBehavior.Activated = true; //set all behaviors false but...
+        JumpBehavior.Activated = true;
+        GrabThrowBehavior.Activated = true;
         
         modeAlertAnim = GameObject.Find("Mode Alert").GetComponent<Animator>();
 
@@ -88,14 +90,23 @@ public class BehaviorManager : MonoBehaviour
         {
             playerIsMoving = false;
         }
+        
         if (Input.GetButtonDown("Action"))
         {
             foreach (var behavior in _behaviors)
             {
                 if (behavior.Activated)
-                    behavior.PerformAction();
+                    behavior.OnActionPress();
             }
-
+        } 
+        
+        if (Input.GetButtonUp("Action"))
+        {
+            foreach (var behavior in _behaviors)
+            {
+                if (behavior.Activated)
+                    behavior.OnActionRelease();
+            }
         } 
     }
     
