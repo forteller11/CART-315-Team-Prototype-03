@@ -1,11 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Behaviors;
 using UnityEngine;
 
-public class fireBehavior : MonoBehaviour
+public class FireBehavior : MonoBehaviour, IBehavior
 {
+    public BehaviorManager BehaviorManager { get; set; }
+    public MonoBehaviour Script { get; set; }
+    
     private GameObject player;
-    playerMovement playerMovementScript;
+    BehaviorManager _behaviorManagerScript;
 
     Animator fireAnim;
 
@@ -14,23 +18,28 @@ public class fireBehavior : MonoBehaviour
     {
         fireAnim = GetComponent<Animator>();
         player = GameObject.Find("PlayerSprite");
-        playerMovementScript = player.GetComponent<playerMovement>();
+        _behaviorManagerScript = player.GetComponent<BehaviorManager>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        switch (playerMovementScript.abilityIndex)
+        switch (_behaviorManagerScript.AbilityMode)
         {
-            case 0:
+            case BehaviorManager.AbilityModeEnum.Jump:
                 fireAnim.SetInteger("modeIndex", 0);
                 break;
-            case 1:
+            case BehaviorManager.AbilityModeEnum.Fire:
                 fireAnim.SetInteger("modeIndex", 1);
                 break;
-            case 2:
+            case BehaviorManager.AbilityModeEnum.GrabThrow:
                 fireAnim.SetInteger("modeIndex", 2);
                 break;
         }
+    }
+
+    public void PerformAction()
+    {
+        throw new System.NotImplementedException();
     }
 }

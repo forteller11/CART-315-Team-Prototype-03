@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Charly\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Charly\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_CART-315-Team-Prototype-03.-344783631.00" t="ExcludeRecursive" />
+    <e p="D:\MOVE\Homework\Concordia Year 02\Semester 1\CART 315 -- Digital Prototyping\TeamPrototypes\CART-315-Team-Prototype-03" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Scripts" t="Include">
+          <e p="BackgroundScroll.cs" t="Include" />
+          <e p="BehaviorManager.cs" t="Include" />
+          <e p="cameraMovement.cs" t="Include" />
+          <e p="fireBehavior.cs" t="Include" />
+          <e p="GrabThrowBehavior.cs" t="Include" />
+          <e p="IBehavior.cs" t="Include" />
+          <e p="JumpBehavior.cs" t="Include" />
+          <e p="MoveBehavior.cs" t="Include" />
+          <e p="RendererExtensions.cs" t="Include" />
+        </e>
+      </e>
+      <e p="CART-315-Team-Prototype-03.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public class bgScroll : MonoBehaviour
+public class BackgroundScroll : MonoBehaviour
 {
     public Vector2 speed = new Vector2(2, 2);
     public Vector2 direction = new Vector2(-1, 0);
@@ -13,7 +13,7 @@ public class bgScroll : MonoBehaviour
     private List<SpriteRenderer> backgroundPart;
 
     private GameObject player;
-    playerMovement playerMovementScript;
+    BehaviorManager _behaviorManagerScript;
 
     // Start is called before the first frame update
     void Start()
@@ -35,17 +35,17 @@ public class bgScroll : MonoBehaviour
         }
 
         player = GameObject.Find("PlayerSprite");
-        playerMovementScript = player.GetComponent<playerMovement>();
+        _behaviorManagerScript = player.GetComponent<BehaviorManager>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(playerMovementScript.playerIsMoving == true)
+        if(_behaviorManagerScript.playerIsMoving == true)
         {
             //Debug.Log(playerMovementScript.x_movement);
             //direction.x = playerMovementScript.x_movement;
-            direction.x = playerMovementScript.rb.velocity.x;
+            direction.x = _behaviorManagerScript.Rb.velocity.x;
             //direction.y = playerMovementScript.rb.velocity.y;
             Vector3 movement = new Vector3(
                 speed.x * direction.x,
