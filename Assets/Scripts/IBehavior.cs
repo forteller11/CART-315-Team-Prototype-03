@@ -7,6 +7,7 @@ namespace Behaviors
         void PerformAction();
         BehaviorManager BehaviorManager { get; set; }
         MonoBehaviour Script { get; set; }
+        bool Activated { get; set; }
 
     }
 }

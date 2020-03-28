@@ -62,12 +62,11 @@ public class BehaviorManager : MonoBehaviour
 
         foreach (var behavior in _behaviors)
         {
-            behavior.Script.enabled = false;
+            behavior.Activated = false;
             behavior.BehaviorManager = this;
         }
-            
         
-        MoveBehavior.enabled = true; //set all behaviors false but movement
+        MoveBehavior.Activated = true; //set all behaviors false but movement
         
         modeAlertAnim = GameObject.Find("Mode Alert").GetComponent<Animator>();
 
@@ -92,10 +91,15 @@ public class BehaviorManager : MonoBehaviour
         if (Input.GetButtonDown("Action"))
         {
             foreach (var behavior in _behaviors)
-                behavior.PerformAction();
-            
+            {
+                if (behavior.Activated)
+                    behavior.PerformAction();
+            }
+
         } 
     }
+    
+
     void FixedUpdate()
     {
        
@@ -130,15 +134,13 @@ public class BehaviorManager : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         modeAlertAnim.SetTrigger("modeSwapped");
+
 //        abilityIndex++;
 //        abilityIndex = abilityIndex % 3;
 //        Debug.Log($"ability index  + { abilityIndex }");
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        Debug.Log("also working");
-    }
+
 
     void useAbility1()
     {

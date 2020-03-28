@@ -16,6 +16,7 @@
           <e p="JumpBehavior.cs" t="Include" />
           <e p="MoveBehavior.cs" t="Include" />
           <e p="RendererExtensions.cs" t="Include" />
+          <e p="smallRoomUI.cs" t="Include" />
         </e>
       </e>
       <e p="CART-315-Team-Prototype-03.sln" t="IncludeFlat" />

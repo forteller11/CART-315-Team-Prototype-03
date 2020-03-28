@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class smallRoomUI : MonoBehaviour
 {
     private GameObject player;
-    playerMovement playerMovementScript;
+    BehaviorManager _behaviorManagerScript;
 
     private Text modeAlert;
     Animator modeAlertAnim;
@@ -14,7 +14,7 @@ public class smallRoomUI : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("PlayerSprite");
-        playerMovementScript = player.GetComponent<playerMovement>();
+        _behaviorManagerScript = player.GetComponent<BehaviorManager>();
 
         modeAlert = GameObject.Find("Mode Alert").GetComponent<Text>();
         modeAlertAnim = GameObject.Find("Mode Alert").GetComponent<Animator>();
@@ -24,17 +24,37 @@ public class smallRoomUI : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        switch (playerMovementScript.abilityIndex)
+        modeAlert.text = "Mode: ";
+        bool multipleModesActive = false;
+        
+        if (_behaviorManagerScript.MoveBehavior.enabled)
         {
-            case 0:
-                modeAlert.text = "Mode 1";
-                break;
-            case 1:
-                modeAlert.text = "Mode 2";
-                break;
-            case 2:
-                modeAlert.text = "Mode 3";
-                break;
+            modeAlert.text += " Walk";
+            if (multipleModesActive)
+                modeAlert.text += " &";
+            multipleModesActive = true;
         }
+        if (_behaviorManagerScript.JumpBehavior.enabled)
+        {
+            modeAlert.text += " Jump";
+            if (multipleModesActive)
+                modeAlert.text += " &";
+            multipleModesActive = true;
+        }
+        if (_behaviorManagerScript.FireBehavior.enabled)
+        {
+            modeAlert.text += " Fire";
+            if (multipleModesActive)
+                modeAlert.text += " &";
+            multipleModesActive = true;
+        }
+        if (_behaviorManagerScript.GrabThrowBehavior.enabled)
+        {
+            modeAlert.text += " Grab/Throw";
+            if (multipleModesActive)
+                modeAlert.text += " &";
+            multipleModesActive = true;
+        }
+        
     }
 }

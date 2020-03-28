@@ -7,7 +7,8 @@ namespace Behaviors
     {
         public BehaviorManager BehaviorManager { get; set; }
         public MonoBehaviour Script { get; set; }
-        
+        public bool Activated { get; set; }
+
         private Transform _grabbedItem;
         [SerializeField] private float _releaseForce;
         [SerializeField] private HingeJoint2D _grabHingeJoint2D;

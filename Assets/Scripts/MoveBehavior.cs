@@ -8,8 +8,10 @@ namespace Behaviors
     {
         public BehaviorManager BehaviorManager { get; set; }
         public MonoBehaviour Script { get; set; }
-        
+        public bool Activated { get; set; }
+
         public float MovementMultiplier = 10f;
+        public float MaxHorizontalVelocity = 4f;
         
         public void PerformAction()
         {
@@ -21,12 +23,13 @@ namespace Behaviors
             float horizontalInput = Input.GetAxis("Horizontal");
             Vector2 horizontalForce = new Vector2(horizontalInput * MovementMultiplier, 0f);
             
-            BehaviorManager.Rb.AddForce(horizontalForce);
+            if (Mathf.Abs(BehaviorManager.Rb.velocity.x) < MaxHorizontalVelocity)
+                BehaviorManager.Rb.AddForce(horizontalForce);
             
 
             if (Math.Abs(horizontalInput) > 0.01f)
             {
-                if (BehaviorManager.Rb.velocity.x > 0)
+                if (horizontalInput > 0)
                 {
                     BehaviorManager.Animator.SetBool("isWalkingAhead", true);
                     BehaviorManager.Animator.SetBool("isWalkingBack", false);
