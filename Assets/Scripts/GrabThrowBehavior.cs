@@ -53,7 +53,9 @@ namespace Behaviors
             
             Debug.Log("Grab");
             _grabbedObject = _grabFocus;
-            _grabHingeJoint2D = _grabbedObject.AddComponent<HingeJoint2D>();
+            _grabHingeJoint2D = _grabbedObject.GetComponent<HingeJoint2D>();
+            if (_grabHingeJoint2D == null)
+                _grabHingeJoint2D = _grabbedObject.AddComponent<HingeJoint2D>();
             _grabHingeJoint2D.connectedBody = BehaviorManager.Rb;
             _grabHingeJoint2D.autoConfigureConnectedAnchor = false;
         }
@@ -71,7 +73,6 @@ namespace Behaviors
                 BehaviorManager.Rb.velocity.x * _releaseForceMultiplier,
                 BehaviorManager.Rb.velocity.y
             );
-
             _grabbedObject = null;
         }
     }
