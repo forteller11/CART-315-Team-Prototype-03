@@ -10,8 +10,8 @@ namespace Behaviors
         public MonoBehaviour Script { get; set; }
         public bool Activated { get; set; }
 
-        private GameObject _grabFocus;
-        private GameObject _grabbedObject;
+        [SerializeField] private GameObject _grabFocus;
+        [SerializeField] private GameObject _grabbedObject;
         [SerializeField] private float _releaseForceMultiplier = 4;
         [SerializeField] private HingeJoint2D _grabHingeJoint2D;
         
@@ -20,8 +20,12 @@ namespace Behaviors
 
         private void Update()
         {
-            if (Activated == false)
+
+            if (Activated == false || _grabbedObject != null)
+            {
+                _grabFocus = null;
                 return;
+            }
             
             BehaviorManager.JumpBehavior.Activated = true;
             List<Collider2D> overlappingColliders = new List<Collider2D>();
@@ -34,15 +38,12 @@ namespace Behaviors
                         Debug.Log("Ready to Grab");
                         _grabFocus = overlappingColliders[i].gameObject;
                         BehaviorManager.JumpBehavior.Activated = false;
+                        return;
                     }
                 }
 
             }
-            else
-            {
-                _grabFocus = null;
-            }
-            
+            _grabFocus = null;
         }
         
         
@@ -56,6 +57,7 @@ namespace Behaviors
             _grabHingeJoint2D = _grabbedObject.GetComponent<HingeJoint2D>();
             if (_grabHingeJoint2D == null)
                 _grabHingeJoint2D = _grabbedObject.AddComponent<HingeJoint2D>();
+            _grabHingeJoint2D.enabled = true;
             _grabHingeJoint2D.connectedBody = BehaviorManager.Rb;
             _grabHingeJoint2D.autoConfigureConnectedAnchor = false;
         }
@@ -66,7 +68,8 @@ namespace Behaviors
                 return;
             
             Debug.Log("Grab release");
-            Destroy(_grabHingeJoint2D);
+            _grabHingeJoint2D.connectedBody = null;
+            _grabHingeJoint2D.enabled = false;
             _grabHingeJoint2D = null;
            
             _grabbedObject.GetComponent<Rigidbody2D>().velocity = new Vector2(
