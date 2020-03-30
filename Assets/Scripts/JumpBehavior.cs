@@ -10,7 +10,7 @@ namespace Behaviors
         public BehaviorManager BehaviorManager { get; set; }
         public MonoBehaviour Script { get; set; }
         public bool Activated { get; set; }
-        private bool _grounded;
+        public bool Grounded { private set; get; }
 
         public float JumpForce = 500f;
 
@@ -23,14 +23,14 @@ namespace Behaviors
                 {
                     if (overlappingColliders[i].gameObject.tag == "Ground")
                     {
-                        _grounded = true;
+                        Grounded = true;
                     }
                 }
 
             }
             else
             {
-                _grounded = false;
+                Grounded = false;
             }
         }
 
@@ -42,16 +42,18 @@ namespace Behaviors
         
         public void OnActionPress()
         {
-            if (_grounded == false)
+            if (Grounded == false)
                 return;
             
             BehaviorManager.Rb.AddForce(new Vector2(0, JumpForce));
+            Grounded = false;
         }
         
         public void OnActionRelease()
         {
-            if (_grounded == true)
+            if (Grounded)
                 return;
+            
             if (BehaviorManager.Rb.velocity.y > 0)
                 BehaviorManager.Rb.velocity *= new Vector2(1, .6f);
         }

@@ -126,30 +126,8 @@ public class BehaviorManager : MonoBehaviour
     {
         modeAlertAnim.SetTrigger("modeSwapped");
 
-//        abilityIndex++;
-//        abilityIndex = abilityIndex % 3;
-//        Debug.Log($"ability index  + { abilityIndex }");
     }
 
 
-
-    void useAbility1()
-    {
-        // This allows jumping/levitating
-        Debug.Log("you used 1");
-        Vector2 jump_force = new Vector2(0, 250);
-        Rb.AddForce(jump_force);
-    }
-
-    void useAbility2()
-    {
-        // This would allow combining? if an item thowing mechanic or something similar is added
-        Debug.Log("you used 2");
-    }
-
-    void useAbility3()
-    {
-        // This allows ???
-        Debug.Log("you used 3");
-    }
+    
 }

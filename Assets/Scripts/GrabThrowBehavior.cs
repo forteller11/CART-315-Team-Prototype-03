@@ -13,7 +13,7 @@ namespace Behaviors
         public bool Activated { get; set; }
 
         [SerializeField] private GameObject _grabFocus;
-        [SerializeField] private GameObject _grabbedObject;
+        [SerializeField] public GameObject GrabbedObject { get; private set; }
         [SerializeField] private float _releaseForceMultiplier = 4;
         [SerializeField] private FixedJoint2D _grabHingeJoint2D;
         
@@ -25,7 +25,7 @@ namespace Behaviors
             if (_grabHingeJoint2D != null)
                 _grabHingeJoint2D.autoConfigureConnectedAnchor = false;
 
-            if (Activated == false || _grabbedObject != null)
+            if (Activated == false || GrabbedObject != null)
             {
                 _grabFocus = null;
                 return;
@@ -59,10 +59,10 @@ namespace Behaviors
                 return;
             
             Debug.Log("Grab");
-            _grabbedObject = _grabFocus;
-            _grabHingeJoint2D = _grabbedObject.GetComponent<FixedJoint2D>();
+            GrabbedObject = _grabFocus;
+            _grabHingeJoint2D = GrabbedObject.GetComponent<FixedJoint2D>();
             if (_grabHingeJoint2D == null)
-                _grabHingeJoint2D = _grabbedObject.AddComponent<FixedJoint2D>();
+                _grabHingeJoint2D = GrabbedObject.AddComponent<FixedJoint2D>();
             _grabHingeJoint2D.enabled = true;
             _grabHingeJoint2D.connectedBody = BehaviorManager.Rb;
             _grabHingeJoint2D.autoConfigureConnectedAnchor = true;
@@ -70,23 +70,23 @@ namespace Behaviors
 
         public void OnActionRelease()
         {
-            if (_grabbedObject == null)
+            if (GrabbedObject == null)
                 return;
             
             Debug.Log("Grab release");
             _grabHingeJoint2D.connectedBody = null;
             _grabHingeJoint2D.enabled = false;
             _grabHingeJoint2D = null;
-            _grabbedObject.GetComponent<Rigidbody2D>().velocity = new Vector2(
+            GrabbedObject.GetComponent<Rigidbody2D>().velocity = new Vector2(
                 BehaviorManager.Rb.velocity.x * _releaseForceMultiplier,
                 BehaviorManager.Rb.velocity.y
             );
-            _grabbedObject = null;
+            GrabbedObject = null;
         }
         
         public void OnFlip()
         {
-            if (_grabbedObject == null)
+            if (GrabbedObject == null)
                 return;
 
             //flip held object

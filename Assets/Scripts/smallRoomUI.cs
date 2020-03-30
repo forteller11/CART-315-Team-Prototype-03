@@ -24,37 +24,46 @@ public class smallRoomUI : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        modeAlert.text = "Mode: ";
+        List<string> modesActive = new List<string>();
         bool multipleModesActive = false;
         
         if (_behaviorManagerScript.MoveBehavior.enabled)
         {
-            modeAlert.text += " Walk";
+            modesActive.Add(" Walk");
             if (multipleModesActive)
                 modeAlert.text += " &";
             multipleModesActive = true;
         }
-        if (_behaviorManagerScript.JumpBehavior.enabled)
+        if (_behaviorManagerScript.JumpBehavior.Grounded && _behaviorManagerScript.JumpBehavior.Activated)
         {
-            modeAlert.text += " Jump";
+            modesActive.Add(" Jump");
             if (multipleModesActive)
                 modeAlert.text += " &";
             multipleModesActive = true;
         }
         if (_behaviorManagerScript.FireBehavior.enabled)
         {
-            modeAlert.text += " Fire";
+            modesActive.Add(" Fire");
             if (multipleModesActive)
                 modeAlert.text += " &";
             multipleModesActive = true;
         }
-        if (_behaviorManagerScript.GrabThrowBehavior.enabled)
+        if (_behaviorManagerScript.GrabThrowBehavior.GrabbedObject != null)
         {
-            modeAlert.text += " Grab/Throw";
+            modesActive.Add(" Grab/Throw");
             if (multipleModesActive)
                 modeAlert.text += " &";
             multipleModesActive = true;
         }
+        
+        modeAlert.text = "Mode:";
+        for (int i = 0; i < modesActive.Count; i++)
+        {
+            modeAlert.text += modesActive[i];
+            if (i != modesActive.Count - 1)
+                modeAlert.text += " &";
+        }
+        
         
     }
 }

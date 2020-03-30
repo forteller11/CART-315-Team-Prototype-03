@@ -35,18 +35,26 @@ public class FireBehavior : MonoBehaviour, IBehavior
     // Update is called once per frame
     void FixedUpdate()
     {
-        switch (_behaviorManagerScript.AbilityMode)
-        {
-            case BehaviorManager.AbilityModeEnum.Jump:
-                fireAnim.SetInteger("modeIndex", 0);
-                break;
-            case BehaviorManager.AbilityModeEnum.Fire:
-                fireAnim.SetInteger("modeIndex", 1);
-                break;
-            case BehaviorManager.AbilityModeEnum.GrabThrow:
-                fireAnim.SetInteger("modeIndex", 2);
-                break;
-        }
+
+//        if (BehaviorManager.GrabThrowBehavior.GrabbedObject != null)
+//        {
+//            fireAnim.SetInteger("modeIndex", 0);
+//            return;
+//        }
+//        
+//        if (BehaviorManager.GrabThrowBehavior.GrabbedObject != null)
+//        {
+//            fireAnim.SetInteger("modeIndex", 0);
+//            return;
+//        }
+//
+//        case BehaviorManager.AbilityModeEnum.Fire:
+//                fireAnim.SetInteger("modeIndex", 1);
+//                break;
+//            case BehaviorManager.AbilityModeEnum.GrabThrow:
+//                fireAnim.SetInteger("modeIndex", 2);
+//                break;
+//        }
     }
 
     public void OnActionPress()
