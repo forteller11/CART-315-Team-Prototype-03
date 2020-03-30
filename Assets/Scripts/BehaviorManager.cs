@@ -8,10 +8,9 @@ using UnityEngine.Serialization;
 [RequireComponent(typeof(Rigidbody2D))]
 public class BehaviorManager : MonoBehaviour
 {
-    public float movement_scaler;
-    public float jump_scaler;
-    public float max_speed;
-    public float x_movement;
+    private float _horizontalInput;
+    private SpriteRenderer _spriteRenderer;
+    Animator modeAlertAnim;
     
     [NonSerialized] public JumpBehavior JumpBehavior;
     [NonSerialized] public FireBehavior FireBehavior;
@@ -19,7 +18,6 @@ public class BehaviorManager : MonoBehaviour
     [NonSerialized] public MoveBehavior MoveBehavior;
     [NonSerialized] private List<IBehavior> _behaviors;
     
-    Animator modeAlertAnim;
     
     [Flags]
     public enum AbilityModeEnum
@@ -35,11 +33,11 @@ public class BehaviorManager : MonoBehaviour
     public bool playerIsMoving;
 
     public Rigidbody2D Rb;
-    [FormerlySerializedAs("playerAnim")] public Animator Animator;
 
     // Start is called before the first frame update
     void Start()
     {
+        #region init behaviors
         JumpBehavior = gameObject.AddComponent<JumpBehavior>();
         JumpBehavior.Script = JumpBehavior;
         
@@ -70,10 +68,11 @@ public class BehaviorManager : MonoBehaviour
         JumpBehavior.Activated = true;
         GrabThrowBehavior.Activated = true;
         
+        #endregion
+        
         modeAlertAnim = GameObject.Find("Mode Alert").GetComponent<Animator>();
-
+        _spriteRenderer = GetComponent<SpriteRenderer>();
         Rb = gameObject.GetComponent<Rigidbody2D>();
-        Animator = GetComponent<Animator>();
         playerIsMoving = false;
         AbilityMode = AbilityModeEnum.Movement;
         
@@ -109,38 +108,19 @@ public class BehaviorManager : MonoBehaviour
             }
         } 
     }
-    
 
-    void FixedUpdate()
+    public void Flip()
     {
-       
+        Debug.Log("Flip");
+        _spriteRenderer.flipX = !_spriteRenderer.flipX;
         
-//        if(playerIsMoving)
-//        {
-//            x_movement = Input.GetAxis("Horizontal");
-//
-//            if (Rb.velocity.magnitude < max_speed)
-//            {
-//                Vector2 movement = new Vector2(x_movement, 0);
-//                Rb.AddForce(movement_scaler * movement);
-//            }
-//
-//            if (x_movement < 0)
-//            {
-//                Animator.SetBool("isWalkingAhead", false);
-//                Animator.SetBool("isWalkingBack", true);
-//            }
-//            else
-//            {
-//                Animator.SetBool("isWalkingAhead", true);
-//                Animator.SetBool("isWalkingBack", false);
-//            }
-//        } else
-//        {
-//            Animator.SetBool("isWalkingAhead", false);
-//            Animator.SetBool("isWalkingBack", false);
-//        }
+        foreach (var behavior in _behaviors)
+        {
+            if (behavior.Activated)
+                behavior.OnFlip();
+        }
     }
+    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -157,7 +137,7 @@ public class BehaviorManager : MonoBehaviour
     {
         // This allows jumping/levitating
         Debug.Log("you used 1");
-        Vector2 jump_force = new Vector2(0, jump_scaler);
+        Vector2 jump_force = new Vector2(0, 250);
         Rb.AddForce(jump_force);
     }
 

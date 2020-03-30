@@ -3456,9 +3456,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 15
+  m_LinearDrag: 0.19
   m_AngularDrag: 0.05
-  m_GravityScale: 5.91
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -3476,14 +3476,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ad53f75caad5324ebc6a75ecc6d649a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movement_scaler: 10
-  jump_scaler: 250
-  max_speed: 2.5
-  x_movement: 0
   AbilityMode: 1
   playerIsMoving: 0
   Rb: {fileID: 0}
-  Animator: {fileID: 0}
 --- !u!212 &1320619455
 SpriteRenderer:
   m_ObjectHideFlags: 0

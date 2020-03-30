@@ -6,6 +6,7 @@ namespace Behaviors
     {
         void OnActionPress();
         void OnActionRelease();
+        void OnFlip();
 //        void OnActionHold();
         BehaviorManager BehaviorManager { get; set; }
         MonoBehaviour Script { get; set; }

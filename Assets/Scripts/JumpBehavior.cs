@@ -12,16 +12,7 @@ namespace Behaviors
         public bool Activated { get; set; }
         private bool _grounded;
 
-        public float JumpForce = 1400f;
-
-//        public BoxCollider2D _groundCollider2D;
-//        public Vector2 
-//
-//        private void Awake()
-//        {
-//            _groundCollider2D = this.gameObject.AddComponent<BoxCollider2D>();
-//            _groundCollider2D.size = sizeO
-//        }
+        public float JumpForce = 500f;
 
         private void Update()
         {
@@ -64,6 +55,8 @@ namespace Behaviors
             if (BehaviorManager.Rb.velocity.y > 0)
                 BehaviorManager.Rb.velocity *= new Vector2(1, .6f);
         }
+        
+        public void OnFlip() { }
 
         
     }

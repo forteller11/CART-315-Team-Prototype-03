@@ -10,6 +10,11 @@ public class FireBehavior : MonoBehaviour, IBehavior
         throw new System.NotImplementedException();
     }
 
+    public void OnFlip()
+    {
+        throw new System.NotImplementedException();
+    }
+
     public BehaviorManager BehaviorManager { get; set; }
     public MonoBehaviour Script { get; set; }
     public bool Activated { get; set; }

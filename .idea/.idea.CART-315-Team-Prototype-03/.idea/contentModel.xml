@@ -10,6 +10,7 @@
           <e p="BackgroundScroll.cs" t="Include" />
           <e p="BehaviorManager.cs" t="Include" />
           <e p="cameraMovement.cs" t="Include" />
+          <e p="Extensions.cs" t="Include" />
           <e p="fireBehavior.cs" t="Include" />
           <e p="GrabThrowBehavior.cs" t="Include" />
           <e p="IBehavior.cs" t="Include" />
