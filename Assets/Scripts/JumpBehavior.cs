@@ -14,6 +14,9 @@ namespace Behaviors
 
         public float JumpForce = 500f;
 
+        [SerializeField]
+        public BoxCollider2DClass collider = new BoxCollider2DClass();
+
         private void Update()
         {
             List<Collider2D> overlappingColliders = new List<Collider2D>();
@@ -60,6 +63,9 @@ namespace Behaviors
         
         public void OnFlip() { }
 
-        
+        private void OnGUI()
+        {
+            collider.DebugDraw(transform.position, transform.localScale);
+        }
     }
 }
