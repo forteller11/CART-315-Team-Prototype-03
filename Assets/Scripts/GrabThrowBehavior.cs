@@ -18,12 +18,12 @@ namespace Behaviors
         [SerializeField] private FixedJoint2D _grabHingeJoint2D;
         
         [SerializeField]
-        public BoxCollider2D Collider;
+        public Collider2D GrabHitbox;
         [SerializeField] private float LiftHeight = 0.2f;
 
         private void Start()
         {
-            if (Collider == null)
+            if (GrabHitbox == null)
                 Debug.LogWarning("Assign collider a ref");
         }
 
@@ -42,7 +42,7 @@ namespace Behaviors
             
             BehaviorManager.JumpBehavior.Activated = true;
             List<Collider2D> overlappingColliders = new List<Collider2D>();
-            if (Physics2D.GetContacts(Collider, overlappingColliders) > 0)
+            if (Physics2D.GetContacts(GrabHitbox, overlappingColliders) > 0)
             {
                 for (int i = 0; i < overlappingColliders.Count; i++)
                 {

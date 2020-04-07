@@ -4,12 +4,43 @@
     <e p="C:\Users\Charly\.Rider2019.2\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\Charly\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_CART-315-Team-Prototype-03.-344783631.00" t="ExcludeRecursive" />
     <e p="D:\MOVE\Homework\Concordia Year 02\Semester 1\CART 315 -- Digital Prototyping\TeamPrototypes\CART-315-Team-Prototype-03" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Plugins" t="Include">
+          <e p="Editor" t="Include">
+            <e p="RelationsInspector" t="Include">
+              <e p="Backends" t="Include">
+                <e p="AutoBackend" t="Include">
+                  <e p="ReflectionUtil.cs" t="Include" />
+                  <e p="RIAutoBackend.cs" t="Include" />
+                </e>
+                <e p="HierarchyExample" t="Include">
+                  <e p="SceneHierarchyBackend.cs" t="Include" />
+                  <e p="TagBackend.cs" t="Include" />
+                </e>
+              </e>
+              <e p="BackendUtils" t="Include">
+                <e p="BackendUtil.cs" t="Include" />
+                <e p="ColorLegendWidget.cs" t="Include" />
+                <e p="DrawUtil.cs" t="Include" />
+                <e p="MinimalBackend.cs" t="Include" />
+                <e p="RandomColor.cs" t="Include" />
+                <e p="ScriptableObjectBackend.cs" t="Include" />
+                <e p="ScriptableObjectBackendToolbar.cs" t="Include" />
+              </e>
+              <e p="RelationsInspectorMenuItem.cs" t="Include" />
+            </e>
+          </e>
+          <e p="RelationsInspector" t="Include">
+            <e p="AutoBackendAttributes.cs" t="Include" />
+          </e>
+        </e>
         <e p="Scripts" t="Include">
           <e p="BackgroundScroll.cs" t="Include" />
           <e p="BehaviorManager.cs" t="Include" />
-          <e p="BoxCollider.cs" t="Include" />
+          <e p="BoxCollider2DClass.cs" t="Include" />
           <e p="cameraMovement.cs" t="Include" />
           <e p="Extensions.cs" t="Include" />
           <e p="fireBehavior.cs" t="Include" />

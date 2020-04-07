@@ -39,6 +39,10 @@ public class BehaviorManager : MonoBehaviour
     
     [HideInInspector] public Rigidbody2D Rb;
 
+    public bool actionFlag1Activated = false;
+    public bool actionFlag2Activated = false;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -90,6 +94,7 @@ public class BehaviorManager : MonoBehaviour
         if (Input.GetAxis("Horizontal") > 0 || Input.GetAxis("Horizontal") < 0)
         {
             playerIsMoving = true;
+            actionFlag1Activated = true;
         } else
         {
             playerIsMoving = false;
@@ -111,6 +116,11 @@ public class BehaviorManager : MonoBehaviour
                 if (behavior.Activated)
                     behavior.OnActionRelease();
             }
+            if (actionFlag1Activated)
+            {
+                actionFlag2Activated = true;
+            }
+            
         } 
     }
 
