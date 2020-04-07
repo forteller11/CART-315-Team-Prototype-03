@@ -6,6 +6,11 @@ using UnityEngine;
 using UnityEngine.Serialization;
 
 [RequireComponent(typeof(Rigidbody2D))]
+
+[RequireComponent(typeof(JumpBehavior))]
+[RequireComponent(typeof(FireBehavior))]
+[RequireComponent(typeof(GrabThrowBehavior))]
+[RequireComponent(typeof(MoveBehavior))]
 public class BehaviorManager : MonoBehaviour
 {
     private float _horizontalInput;
@@ -31,23 +36,23 @@ public class BehaviorManager : MonoBehaviour
     public AbilityModeEnum AbilityMode = AbilityModeEnum.Jump;
 
     public bool playerIsMoving;
-
-    public Rigidbody2D Rb;
+    
+    [HideInInspector] public Rigidbody2D Rb;
 
     // Start is called before the first frame update
     void Start()
     {
         #region init behaviors
-        JumpBehavior = gameObject.AddComponent<JumpBehavior>();
+        JumpBehavior = gameObject.GetComponent<JumpBehavior>();
         JumpBehavior.Script = JumpBehavior;
         
-        FireBehavior = gameObject.AddComponent<FireBehavior>();
+        FireBehavior = gameObject.GetComponent<FireBehavior>();
         FireBehavior.Script = FireBehavior;
         
-        GrabThrowBehavior = gameObject.AddComponent<GrabThrowBehavior>();
+        GrabThrowBehavior = gameObject.GetComponent<GrabThrowBehavior>();
         GrabThrowBehavior.Script = GrabThrowBehavior;
         
-        MoveBehavior = gameObject.AddComponent<MoveBehavior>();
+        MoveBehavior = gameObject.GetComponent<MoveBehavior>();
         MoveBehavior.Script = MoveBehavior;
         
         _behaviors = new List<IBehavior>()
@@ -111,6 +116,10 @@ public class BehaviorManager : MonoBehaviour
 
     public void Flip()
     {
+        
+//        if (GrabThrowBehavior.GrabbedObject != null)
+//            return;
+        
         Debug.Log("Flip");
         _spriteRenderer.flipX = !_spriteRenderer.flipX;
         

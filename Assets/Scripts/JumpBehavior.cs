@@ -13,21 +13,25 @@ namespace Behaviors
         public bool Grounded { private set; get; }
 
         public float JumpForce = 500f;
+        public Collider2D GroundedCollider2D;
 
-        [SerializeField]
-        public BoxCollider2DClass collider = new BoxCollider2DClass();
+        private void Start()
+        {
+            if (GroundedCollider2D == null)
+                Debug.LogWarning("grounded collider should be referenced");
+        }
 
         private void Update()
         {
             List<Collider2D> overlappingColliders = new List<Collider2D>();
-            if (Physics2D.GetContacts(BehaviorManager.Rb, overlappingColliders) > 0)
+            if (Physics2D.GetContacts(GroundedCollider2D, overlappingColliders) > 0)
             {
                 for (int i = 0; i < overlappingColliders.Count; i++)
                 {
-                    if (overlappingColliders[i].gameObject.tag == "Ground")
-                    {
+//                    if (overlappingColliders[i].gameObject.tag == "Ground")
+//                    {
                         Grounded = true;
-                    }
+//                    }
                 }
 
             }
@@ -62,10 +66,6 @@ namespace Behaviors
         }
         
         public void OnFlip() { }
-
-        private void OnGUI()
-        {
-            collider.DebugDraw(transform.position, transform.localScale);
-        }
+        
     }
 }

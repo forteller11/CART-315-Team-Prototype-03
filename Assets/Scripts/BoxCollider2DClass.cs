@@ -33,12 +33,17 @@ namespace Behaviors
             var pointRightDown = new Vector2(x2, y1);
             var pointRightUp = new Vector2(x2, y2);
                 
-            Debug.DrawLine(pointLeftDown, pointLeftUp);
-            Debug.DrawLine(pointLeftUp, pointRightUp);
-            Debug.DrawLine(pointRightUp, pointRightDown);
-            Debug.DrawLine(pointRightDown, pointLeftDown);
+            Debug.DrawLine(pointLeftDown, pointLeftUp, Color.cyan);
+            Debug.DrawLine(pointLeftUp, pointRightUp, Color.cyan);
+            Debug.DrawLine(pointRightUp, pointRightDown, Color.cyan);
+            Debug.DrawLine(pointRightDown, pointLeftDown, Color.cyan);
         }
         //TODO debug drawer
+
+//        void GetCollisionsHits(Flags)
+//        {
+//            Physics2D.ge
+//        }
         
     }
 }

@@ -17,7 +17,15 @@ namespace Behaviors
         [SerializeField] private float _releaseForceMultiplier = 4;
         [SerializeField] private FixedJoint2D _grabHingeJoint2D;
         
+        [SerializeField]
+        public BoxCollider2D Collider;
         [SerializeField] private float LiftHeight = 0.2f;
+
+        private void Start()
+        {
+            if (Collider == null)
+                Debug.LogWarning("Assign collider a ref");
+        }
 
         private void Update()
         {
@@ -34,21 +42,23 @@ namespace Behaviors
             
             BehaviorManager.JumpBehavior.Activated = true;
             List<Collider2D> overlappingColliders = new List<Collider2D>();
-            if (Physics2D.GetContacts(BehaviorManager.Rb, overlappingColliders) > 0)
+            if (Physics2D.GetContacts(Collider, overlappingColliders) > 0)
             {
                 for (int i = 0; i < overlappingColliders.Count; i++)
                 {
                     if (overlappingColliders[i].gameObject.tag == "Grabbable")
                     {
-                        Debug.Log("Ready to Grab");
+                        //Debug.Log("Ready to Grab");
                         _grabFocus = overlappingColliders[i].gameObject;
                         BehaviorManager.JumpBehavior.Activated = false;
                         return;
                     }
                 }
-
+                
             }
             _grabFocus = null;
+
+            
         }
 
 
@@ -86,22 +96,25 @@ namespace Behaviors
         
         public void OnFlip()
         {
-            if (GrabbedObject == null)
-                return;
-
-            //flip held object
-            //TODO, if object now bangs into wall, reflip object to prevent flip
-
-            var position = transform.position;
-
-            Debug.Log($"Pre {transform.localPosition}");
-
-            _grabHingeJoint2D.connectedAnchor = new Vector2(-_grabHingeJoint2D.connectedAnchor.x, _grabHingeJoint2D.connectedAnchor.y);
+//
+//            //flip held object
+//            //TODO, if object now bangs into wall, reflip object to prevent flip
+//
+//            var position = transform.position;
+//
+//            Debug.Log($"Pre {transform.localPosition}");
+//
+//            _grabHingeJoint2D.connectedAnchor = new Vector2(-_grabHingeJoint2D.connectedAnchor.x, _grabHingeJoint2D.connectedAnchor.y);
 
 
 
             //_grabHingeJoint2D.autoConfigureConnectedAnchor = true;
 
+        }
+        
+        private void OnGUI()
+        {
+         //   Collider.DebugDraw(transform.position, transform.localScale);
         }
         
         
