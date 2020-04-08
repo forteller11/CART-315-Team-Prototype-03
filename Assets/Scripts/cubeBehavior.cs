@@ -6,19 +6,23 @@ public class cubeBehavior : MonoBehaviour
 {
     public GameObject tower;
     Animator rumbleAlertAAnim;
+    public bool towerActivated = false;
 
     // Start is called before the first frame update
     void Start()
     {
         tower = GameObject.Find("Tower");
-        tower.SetActive(false);
         rumbleAlertAAnim = GameObject.Find("Rumble Alert A").GetComponent<Animator>();
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        if(towerActivated)
+        {
+            tower.SetActive(true);
+        }
+        Debug.Log(towerActivated);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -26,7 +30,7 @@ public class cubeBehavior : MonoBehaviour
         if (collision.gameObject.name == "Trigger Zone A")
         {
             Debug.Log("*RUMBLE*");
-            tower.SetActive(true);
+            towerActivated = true;
             rumbleAlertAAnim.SetTrigger("modeSwapped");
         }
     }

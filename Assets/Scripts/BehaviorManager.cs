@@ -43,6 +43,7 @@ public class BehaviorManager : MonoBehaviour
     public bool actionFlag1Activated = false;
     public bool actionFlag2Activated = false;
 
+    public GameObject tower;
 
     // Start is called before the first frame update
     void Start()
@@ -86,7 +87,9 @@ public class BehaviorManager : MonoBehaviour
         Rb = gameObject.GetComponent<Rigidbody2D>();
         playerIsMoving = false;
         AbilityMode = AbilityModeEnum.Movement;
-        
+
+        tower = GameObject.Find("Tower");
+        tower.SetActive(false);
     }
 
     // Update is called once per frame
@@ -97,6 +100,7 @@ public class BehaviorManager : MonoBehaviour
         {
             playerIsMoving = true;
             actionFlag1Activated = true;
+
         } else
         {
             playerIsMoving = false;
