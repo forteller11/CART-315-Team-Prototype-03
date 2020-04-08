@@ -5,12 +5,14 @@ using UnityEngine;
 public class cubeBehavior : MonoBehaviour
 {
     public GameObject tower;
+    Animator rumbleAlertAAnim;
 
     // Start is called before the first frame update
     void Start()
     {
         tower = GameObject.Find("Tower");
         tower.SetActive(false);
+        rumbleAlertAAnim = GameObject.Find("Rumble Alert A").GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -25,6 +27,7 @@ public class cubeBehavior : MonoBehaviour
         {
             Debug.Log("*RUMBLE*");
             tower.SetActive(true);
+            rumbleAlertAAnim.SetTrigger("modeSwapped");
         }
     }
 }

@@ -16,7 +16,8 @@ public class BehaviorManager : MonoBehaviour
     private float _horizontalInput;
     private SpriteRenderer _spriteRenderer;
     Animator modeAlertAnim;
-    
+    Animator exitAlertAnim;
+
     [NonSerialized] public JumpBehavior JumpBehavior;
     [NonSerialized] public FireBehavior FireBehavior;
     [NonSerialized] public GrabThrowBehavior GrabThrowBehavior;
@@ -80,6 +81,7 @@ public class BehaviorManager : MonoBehaviour
         #endregion
         
         modeAlertAnim = GameObject.Find("Mode Alert").GetComponent<Animator>();
+        exitAlertAnim = GameObject.Find("Exit Alert").GetComponent<Animator>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         Rb = gameObject.GetComponent<Rigidbody2D>();
         playerIsMoving = false;
@@ -148,6 +150,7 @@ public class BehaviorManager : MonoBehaviour
         if (collision.gameObject.name == "Trigger Zone C")
         {
             Debug.Log("Successfully exited");
+            exitAlertAnim.SetTrigger("modeSwapped");
         }
     }
 
