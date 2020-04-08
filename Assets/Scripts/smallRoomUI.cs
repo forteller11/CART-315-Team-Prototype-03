@@ -10,6 +10,9 @@ public class smallRoomUI : MonoBehaviour
 
     private Text modeAlert;
     Animator modeAlertAnim;
+
+    private Text exitAlert;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -66,4 +69,5 @@ public class smallRoomUI : MonoBehaviour
         
         
     }
+
 }

@@ -145,8 +145,10 @@ public class BehaviorManager : MonoBehaviour
     {
         modeAlertAnim.SetTrigger("modeSwapped");
 
+        if (collision.gameObject.name == "Trigger Zone C")
+        {
+            Debug.Log("Successfully exited");
+        }
     }
 
-
-    
 }

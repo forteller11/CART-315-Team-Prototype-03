@@ -104,7 +104,7 @@ namespace Behaviors
 //
 //            Debug.Log($"Pre {transform.localPosition}");
 //
-            _grabHingeJoint2D.connectedAnchor = new Vector2(-_grabHingeJoint2D.connectedAnchor.x, _grabHingeJoint2D.connectedAnchor.y);
+            //_grabHingeJoint2D.connectedAnchor = new Vector2(-_grabHingeJoint2D.connectedAnchor.x, _grabHingeJoint2D.connectedAnchor.y);
 
 
 
