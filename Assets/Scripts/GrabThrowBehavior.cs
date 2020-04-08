@@ -19,7 +19,7 @@ namespace Behaviors
         
         [SerializeField]
         public Collider2D GrabHitbox;
-        [SerializeField] private float LiftHeight = 0.2f;
+        //[SerializeField] private float LiftHeight = 0.2f;
 
         private void Start()
         {
